@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gaming_machine
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  init:
+    truncate:
+      finance-result: truncate machine.finance_result
+      game: truncate machine.game
+    start:
+      insert-zero: insert into machine.finance_result values(0, 0)
