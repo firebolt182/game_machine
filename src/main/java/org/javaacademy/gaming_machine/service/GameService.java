@@ -85,7 +85,8 @@ public class GameService {
 
     private void nextAction(AtomicReference<String> action,
                             String thrownSymbols,
-                            int money, String message) {
+                            int money,
+                            String message) {
         updateIncome(money);
         action.set(String.format("%s\n%s",
                 thrownSymbols.replace("", " ").trim(), message));
